@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Chama Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .error { color: #ef4444; font-size: 0.875rem; margin-top: 0.25rem; display: none; }
+        .error-visible { display: block; }
+        .input-error { border-color: #ef4444; }
+        .suggestion { color: #3b82f6; cursor: pointer; text-decoration: underline; }
+        .server-error { color: #ef4444; font-size: 0.875rem; margin-bottom: 1rem; text-align: center; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-roboto flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-lg bg-white rounded-lg shadow-xl p-8">
+        <h1 class="text-3xl font-bold text-center mb-6 text-green-600">Create an Account</h1>
+        <p class="text-center text-gray-600 mb-8">Join the Chama Management System as a member. Contact the admin for official roles.</p>
+
+        <!-- Display server-side errors -->
+        <?php
+        session_start();
+        if (isset($_SESSION['error'])) {
+            echo '<p class="server-error">' . htmlspecialchars($_SESSION['error']) . '</p>';
+            unset($_SESSION['error']);
+        }
+        if (isset($_SESSION['success'])) {
+            echo '<p class="server-error" style="color: #10b981;">' . htmlspecialchars($_SESSION['success']) . '</p>';
+            unset($_SESSION['success']);
+        }
+        ?>
+
+        <form name="signup" action="signup_processor.php" method="POST" novalidate class="space-y-6">
+            <input type="hidden" name="role" value="member">
+            <div>
+                <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
+                <input type="text" name="first_name" id="first_name" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Enter your first name" aria-describedby="first_name_error">
+                <p id="first_name_error" class="error">First name must be 2–50 letters only.</p>
+            </div>
+            <div>
+                <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Enter your last name" aria-describedby="last_name_error">
+                <p id="last_name_error" class="error">Last name must be 2–50 letters only.</p>
+            </div>
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" name="username" id="username" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Choose a username" aria-describedby="username_error">
+                <p id="username_error" class="error">Username must be 3–30 alphanumeric characters.</p>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" name="email" id="email" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="your.email@example.com" aria-describedby="email_error email_suggestion">
+                <p id="email_error" class="error">Please enter a valid email address (e.g., user@domain.com).</p>
+                <p id="email_suggestion" class="error suggestion" style="display: none;"></p>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" name="password" id="password" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Create a password" aria-describedby="password_error">
+                <p id="password_error" class="error">Password must be at least 8 characters, including a letter and a number.</p>
+            </div>
+            <div>
+                <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Confirm your password" aria-describedby="confirm_password_error">
+                <p id="confirm_password_error" class="error">Passwords do not match.</p>
+            </div>
+            <div>
+                <label for="phone_number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="254XXXXXXXXX" aria-describedby="phone_number_error">
+                <p id="phone_number_error" class="error">Phone number must be in format 254 followed by 9 digits.</p>
+            </div>
+            <div>
+                <label for="national_id" class="block text-sm font-medium text-gray-700">National ID</label>
+                <input type="text" name="national_id" id="national_id" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       placeholder="Enter your national ID" aria-describedby="national_id_error">
+                <p id="national_id_error" class="error">National ID must be 6–20 alphanumeric characters.</p>
+            </div>
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                <textarea name="address" id="address" required rows="3"
+                          class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                          placeholder="Enter your full address" aria-describedby="address_error"></textarea>
+                <p id="address_error" class="error">Address must be 10–255 characters.</p>
+            </div>
+            <div>
+                <label for="date_of_birth" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                <input type="date" name="date_of_birth" id="date_of_birth" required
+                       class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                       aria-describedby="date_of_birth_error">
+                <p id="date_of_birth_error" class="error">You must be at least 18 years old and born in the past.</p>
+            </div>
+            <div>
+                <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+                <select name="gender" id="gender" required
+                        class="mt-1 w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500"
+                        aria-describedby="gender_error">
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <p id="gender_error" class="error">Please select a gender.</p>
+            </div>
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-green-700 transition duration-300 font-semibold">
+                Sign Up
+            </button>
+        </form>
+        <p class="mt-6 text-center text-gray-600">
+            Already have an account? <a href="signin.html" class="text-blue-600 hover:underline">Sign In</a>
+        </p>
+    </div>
+    <script>
+        const commonDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com', 'protonmail.com'];
+        const typoDomains = {
+            'gamil.com': 'gmail.com',
+            'gmial.com': 'gmail.com',
+            'yhaoo.com': 'yahoo.com',
+            'hotnail.com': 'hotmail.com',
+            'outlok.com': 'outlook.com'
+        };
+        const form = document.forms['signup'];
+        const fields = [
+            {
+                id: 'first_name',
+                validate: value => /^[A-Za-z]{2,50}$/.test(value),
+                errorMsg: 'First name must be 2–50 letters only.'
+            },
+            {
+                id: 'last_name',
+                validate: value => /^[A-Za-z]{2,50}$/.test(value),
+                errorMsg: 'Last name must be 2–50 letters only.'
+            },
+            {
+                id: 'username',
+                validate: value => /^[A-Za-z0-9]{3,30}$/.test(value),
+                errorMsg: 'Username must be 3–30 alphanumeric characters.'
+            },
+            {
+                id: 'email',
+                validate: value => {
+                    const isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+                    if (isValid) {
+                        const domain = value.split('@')[1].toLowerCase();
+                        const suggestion = typoDomains[domain];
+                        if (suggestion) {
+                            document.getElementById('email_suggestion').innerHTML = `Did you mean <span onclick="applyEmailSuggestion('${suggestion}')" class="suggestion">${value.split('@')[0]}@${suggestion}</span>?`;
+                            document.getElementById('email_suggestion').style.display = 'block';
+                            return false;
+                        }
+                        document.getElementById('email_suggestion').style.display = 'none';
+                    }
+                    return isValid;
+                },
+                errorMsg: 'Please enter a valid email address (e.g., user@domain.com).'
+            },
+            {
+                id: 'password',
+                validate: value => /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(value),
+                errorMsg: 'Password must be at least 8 characters, including a letter and a number.'
+            },
+            {
+                id: 'confirm_password',
+                validate: value => value === form['password'].value,
+                errorMsg: 'Passwords do not match.'
+            },
+            {
+                id: 'phone_number',
+                validate: value => /^254[0-9]{9}$/.test(value),
+                errorMsg: 'Phone number must be in format 254 followed by 9 digits.'
+            },
+            {
+                id: 'national_id',
+                validate: value => /^[A-Za-z0-9]{6,20}$/.test(value),
+                errorMsg: 'National ID must be 6–20 alphanumeric characters.'
+            },
+            {
+                id: 'address',
+                validate: value => value.length >= 10 && value.length <= 255,
+                errorMsg: 'Address must be 10–255 characters.'
+            },
+            {
+                id: 'date_of_birth',
+                validate: value => {
+                    const dob = new Date(value);
+                    const today = new Date();
+                    const minAgeDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+                    return dob < today && dob <= minAgeDate;
+                },
+                errorMsg: 'You must be at least 18 years old and born in the past.'
+            },
+            {
+                id: 'gender',
+                validate: value => ['male', 'female', 'other'].includes(value),
+                errorMsg: 'Please select a gender.'
+            }
+        ];
+        function applyEmailSuggestion(domain) {
+            const emailInput = document.getElementById('email');
+            const username = emailInput.value.split('@')[0];
+            emailInput.value = `${username}@${domain}`;
+            validateField(fields.find(f => f.id === 'email'));
+        }
+        function showError(fieldId, show, message) {
+            const errorElement = document.getElementById(`${fieldId}_error`);
+            const inputElement = document.getElementById(fieldId);
+            errorElement.textContent = message;
+            errorElement.classList.toggle('error-visible', show);
+            inputElement.classList.toggle('input-error', show);
+        }
+        function validateField(field) {
+            const input = form[field.id];
+            const value = input.value.trim();
+            const isValid = field.validate(value);
+            showError(field.id, !isValid, field.errorMsg);
+            return isValid;
+        }
+        fields.forEach(field => {
+            const input = form[field.id];
+            input.addEventListener('blur', () => validateField(field));
+            input.addEventListener('input', () => {
+                if (document.getElementById(`${field.id}_error`).classList.contains('error-visible') || field.id === 'email') {
+                    validateField(field);
+                }
+            });
+        });
+        form.addEventListener('submit', (e) => {
+            let isValid = true;
+            fields.forEach(field => {
+                if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            if (!isValid) {
+                e.preventDefault();
+                const firstError = document.querySelector('.error-visible');
+                if (firstError) {
+                    document.getElementById(firstError.id.replace('_error', '')).focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

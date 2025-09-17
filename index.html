@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Smart Chama Management | Simplify Your Group Savings</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="download.jpg"
+          alt="Chama logo"
+          class="nav__logo"
+          id="logo"
+        />
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">How It Works</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Testimonials</a>
+          </li>
+         <li class="nav__item dropdown">
+            <a class="nav__link nav__link--btn" href="#" aria-haspopup="true" aria-expanded="false">Account</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a class="nav__link" href="signin.php" role="menuitem">Sign In</a></li>
+              <li><a class="nav__link" href="signup.php" role="menuitem">Sign Up</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <h1>
+          Simplify <span class="highlight">Group Savings</span> and<br />
+          <span class="highlight">Empower Communities</span>
+        </h1>
+        <h4>Effortless management for your Chama's financial growth.</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img
+          src="hero-removebg-preview.png"
+          class="header__img"
+          alt="Chama management illustration"
+        />
+      </div>
+    </header>
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">Features</h2>
+        <h3 class="section__header">
+          Manage your Chama with ease and efficiency.
+        </h3>
+      </div>
+
+      <div class="features">
+        <img
+          src="track.png"
+          data-src="track.png"
+          alt="Contributions"
+          class="features__img "
+        />
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-money"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Track Contributions</h5>
+          <p>
+            Keep accurate records of all member contributions and ensure 
+            transparency in your Chama's finances.
+          </p>
+        </div>
+
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-bar-chart"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Financial Reports</h5>
+          <p>
+            Generate detailed financial reports to track savings, expenses, and investments.
+          </p>
+        </div>
+        <img
+          src="report.png"
+          data-src="report.png"
+          alt="Reports"
+          class="features__img "
+        />
+
+        <img
+          src="img/loans-lazy.jpg"
+          data-src="img/loans.jpg"
+          alt="Loans"
+          class="features__img lazy-img"
+        />
+        <div class="features__feature">
+          <div class="features__icon">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-loan"></use>
+            </svg>
+          </div>
+          <h5 class="features__header">Easy Loan Management</h5>
+          <p>
+            Facilitate loan applications, approvals, and repayments seamlessly within the group.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section--2" style="padding: 100px 0; background: linear-gradient(180deg, #ffffff, #f0fff4); text-align: center; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+    <h2 style="font-size: 40px; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.02em;">How It Works</h2>
+    <h3 style="font-size: 20px; font-weight: 400; color: #374151; margin-bottom: 64px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      A seamless and intuitive process to empower your Chama with efficiency and transparency.
+    </h3>
+  </div>
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px;">
+    <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 48px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 8px; flex-wrap: wrap;">
+      <button style="padding: 16px 32px; font-size: 16px; font-weight: 600; color: #ffffff; background: #15803d; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-tab="1" class="tab active">
+        <span style="font-size: 14px; background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 12px;">01</span> Register & Approve
+      </button>
+      <button style="padding: 16px 32px; font-size: 16px; font-weight: 600; color: #15803d; background: #ffffff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-tab="2" class="tab">
+        <span style="font-size: 14px; background: #f0fff4; padding: 4px 8px; border-radius: 12px;">02</span> Contributions
+      </button>
+      <button style="padding: 16px 32px; font-size: 16px; font-weight: 600; color: #15803d; background: #ffffff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-tab="3" class="tab">
+        <span style="font-size: 14px; background: #f0fff4; padding: 4px 8px; border-radius: 12px;">03</span> Meetings
+      </button>
+      <button style="padding: 16px 32px; font-size: 16px; font-weight: 600; color: #15803d; background: #ffffff; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" data-tab="4" class="tab">
+        <span style="font-size: 14px; background: #f0fff4; padding: 4px 8px; border-radius: 12px;">04</span> Loans
+      </button>
+    </div>
+    <div style="position: relative; height: 320px; max-width: 800px; margin: 0 auto;">
+      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 48px; text-align: center; opacity: 1; transition: opacity 0.4s ease;" id="content-1" class="content">
+        <div style="display: flex; justify-content: center; margin-bottom: 24px;">
+          <svg style="width: 64px; height: 64px; fill: #15803d;" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+          </svg>
+        </div>
+        <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Register & Approve Members</h5>
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          Register new members, assign roles, update contact details, and approve them through a streamlined verification process to build a trusted Chama community.
+        </p>
+      </div>
+      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 48px; text-align: center; opacity: 0; display: none; transition: opacity 0.4s ease;" id="content-2" class="content">
+        <div style="display: flex; justify-content: center; margin-bottom: 24px;">
+          <svg style="width: 64px; height: 64px; fill: #15803d;" viewBox="0 0 24 24">
+            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"></path>
+          </svg>
+        </div>
+        <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Contributions & Transactions</h5>
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          Approved members can make monthly contributions, track payment histories, and manage transactions with full transparency and real-time updates.
+        </p>
+      </div>
+      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 48px; text-align: center; opacity: 0; display: none; transition: opacity 0.4s ease;" id="content-3" class="content">
+        <div style="display: flex; justify-content: center; margin-bottom: 24px;">
+          <svg style="width: 64px; height: 64px; fill: #15803d;" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+          </svg>
+        </div>
+        <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Manage Meetings</h5>
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          Schedule and view meetings, join online sessions with one click, and automatically record attendance for efficient and inclusive Chama participation.
+        </p>
+      </div>
+      <div style="background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 48px; text-align: center; opacity: 0; display: none; transition: opacity 0.4s ease;" id="content-4" class="content">
+        <div style="display: flex; justify-content: center; margin-bottom: 24px;">
+          <svg style="width: 64px; height: 64px; fill: #15803d;" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 11H8v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"></path>
+          </svg>
+        </div>
+        <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Apply & Manage Loans</h5>
+        <p style="font-size: 16px; color: #374151; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          Apply for loans based on contribution history and registration duration, with streamlined approval, disbursement, and repayment tracking.
+        </p>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.content');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabNum = tab.dataset.tab;
+          tabs.forEach(t => {
+            t.style.background = '#ffffff';
+            t.style.color = '#15803d';
+            t.querySelector('span').style.background = '#f0fff4';
+            t.classList.remove('active');
+          });
+          tab.style.background = '#15803d';
+          tab.style.color = '#ffffff';
+          tab.querySelector('span').style.background = 'rgba(255,255,255,0.2)';
+          tab.classList.add('active');
+          contents.forEach(c => {
+            c.style.display = 'none';
+            c.style.opacity = '0';
+          });
+          const activeContent = document.getElementById(`content-${tabNum}`);
+          activeContent.style.display = 'block';
+          setTimeout(() => {
+            activeContent.style.opacity = '1';
+          }, 50);
+        });
+      });
+    </script>
+  </div>
+</section>
+
+    <section id="section--3" style="padding: 100px 0; background: #ffffff; text-align: center; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 80px;">
+    <h2 style="font-size: 40px; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; letter-spacing: -0.02em;">What Our Users Say</h2>
+    <h3 style="font-size: 20px; font-weight: 400; color: #374151; margin-bottom: 64px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Chama leaders trust us to simplify and enhance their management needs.
+    </h3>
+  </div>
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 80px; position: relative;">
+    <div style="overflow: hidden; position: relative;">
+      <div class="testimonial-slider" style="display: flex; transition: transform 0.5s ease-in-out; width: 100%; will-change: transform;">
+        <div class="testimonial-slide" style="flex: 0 0 100%; min-width: 100%; padding: 24px;" role="group" aria-label="Testimonial 1">
+          <div style="background: #f0fff4; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 40px; max-width: 600px; margin: 0 auto;">
+            <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Best Chama Management Solution!</h5>
+            <blockquote style="font-size: 16px; color: #374151; line-height: 1.6; margin-bottom: 24px; font-style: italic;">
+              This platform has revolutionized how we manage our Chama. The contribution tracking is seamless, and the reports help us make better financial decisions. Highly recommended!
+            </blockquote>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: #e5e7eb; overflow: hidden;">
+                <!-- Placeholder for image; replace with your image if available -->
+                <!-- <img src="path/to/grace-image.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Grace Wanjiku"> -->
+              </div>
+              <div style="text-align: left;">
+                <h6 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0;">Grace Wanjiku</h6>
+                <p style="font-size: 14px; color: #374151; margin: 0;">Nairobi, Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="flex: 0 0 100%; min-width: 100%; padding: 24px;" role="group" aria-label="Testimonial 2">
+          <div style="background: #f0fff4; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 40px; max-width: 600px; margin: 0 auto;">
+            <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Transparent and Efficient!</h5>
+            <blockquote style="font-size: 16px; color: #374151; line-height: 1.6; margin-bottom: 24px; font-style: italic;">
+              Finally, a system that brings transparency to our group savings. Every member can see their contributions and loan status, eliminating all confusion.
+            </blockquote>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: #e5e7eb; overflow: hidden;">
+                <!-- Placeholder for image; replace with your image if available -->
+                <!-- <img src="path/to/john-image.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="John Mwangi"> -->
+              </div>
+              <div style="text-align: left;">
+                <h6 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0;">John Mwangi</h6>
+                <p style="font-size: 14px; color: #374151; margin: 0;">Mombasa, Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide" style="flex: 0 0 100%; min-width: 100%; padding: 24px;" role="group" aria-label="Testimonial 3">
+          <div style="background: #f0fff4; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 40px; max-width: 600px; margin: 0 auto;">
+            <h5 style="font-size: 24px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px;">Game Changer for Our Group!</h5>
+            <blockquote style="font-size: 16px; color: #374151; line-height: 1.6; margin-bottom: 24px; font-style: italic;">
+              The loan management feature is outstanding. We can now process loan applications faster and track repayments accurately. Our Chama has grown significantly.
+            </blockquote>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+              <div style="width: 60px; height: 60px; border-radius: 50%; background: #e5e7eb; overflow: hidden;">
+                <!-- Placeholder for image; replace with your image if available -->
+                <!-- <img src="path/to/mary-image.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Mary Njeri"> -->
+              </div>
+              <div style="text-align: left;">
+                <h6 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0;">Mary Njeri</h6>
+                <p style="font-size: 14px; color: #374151; margin: 0;">Kisumu, Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="testimonial-btn--left" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: #15803d; color: #ffffff; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background 0.3s ease, opacity 0.3s ease;" aria-label="Previous testimonial" disabled>&larr;</button>
+    <button class="testimonial-btn--right" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: #15803d; color: #ffffff; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: background 0.3s ease, opacity 0.3s ease;" aria-label="Next testimonial">&rarr;</button>
+    <div class="testimonial-dots" style="display: flex; justify-content: center; gap: 12px; margin-top: 24px;" role="tablist">
+      <button class="testimonial-dot active" data-slide="0" style="width: 12px; height: 12px; background: #15803d; border-radius: 50%; border: none; cursor: pointer; transition: background 0.3s ease;" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+      <button class="testimonial-dot" data-slide="1" style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%; border: none; cursor: pointer; transition: background 0.3s ease;" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+      <button class="testimonial-dot" data-slide="2" style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%; border: none; cursor: pointer; transition: background 0.3s ease;" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+    </div>
+    <script>
+      // Initialize slider components
+      const slider = document.querySelector('.testimonial-slider');
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const btnLeft = document.querySelector('.testimonial-btn--left');
+      const btnRight = document.querySelector('.testimonial-btn--right');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      let currentSlide = 0;
+      const maxSlide = slides.length;
+      let isSliding = false;
+
+      // Debugging: Log initialization
+      console.log('Testimonial slider initialized:', { slides: slides.length, currentSlide });
+
+      // Update button states (disable/enable based on slide position)
+      const updateButtonStates = () => {
+        btnLeft.disabled = currentSlide === 0;
+        btnRight.disabled = currentSlide === maxSlide - 1;
+        btnLeft.style.opacity = currentSlide === 0 ? '0.5' : '1';
+        btnRight.style.opacity = currentSlide === maxSlide - 1 ? '0.5' : '1';
+      };
+
+      // Move to specific slide
+      const goToSlide = (slide) => {
+        if (isSliding || slide < 0 || slide >= maxSlide) {
+          console.warn('Invalid slide attempt:', slide);
+          return;
+        }
+        isSliding = true;
+        slider.style.transform = `translateX(-${slide * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === slide);
+          dot.style.background = i === slide ? '#15803d' : '#d1d5db';
+          dot.setAttribute('aria-selected', i === slide ? 'true' : 'false');
+        });
+        currentSlide = slide;
+        updateButtonStates();
+        console.log('Moved to slide:', slide);
+        setTimeout(() => isSliding = false, 500); // Match transition duration
+      };
+
+      // Next slide
+      const nextSlide = () => {
+        if (currentSlide < maxSlide - 1) {
+          goToSlide(currentSlide + 1);
+        } else {
+          console.log('At last slide, cannot go next');
+        }
+      };
+
+      // Previous slide
+      const prevSlide = () => {
+        if (currentSlide > 0) {
+          goToSlide(currentSlide - 1);
+        } else {
+          console.log('At first slide, cannot go previous');
+        }
+      };
+
+      // Event listeners for navigation buttons
+      if (btnRight && btnLeft) {
+        btnRight.addEventListener('click', () => {
+          console.log('Right button clicked');
+          nextSlide();
+        });
+        btnLeft.addEventListener('click', () => {
+          console.log('Left button clicked');
+          prevSlide();
+        });
+      } else {
+        console.error('Testimonial navigation buttons not found');
+      }
+
+      // Event listeners for dots
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          console.log('Dot clicked:', i);
+          goToSlide(i);
+        });
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          console.log('Keyboard: ArrowRight');
+          nextSlide();
+        }
+        if (e.key === 'ArrowLeft') {
+          console.log('Keyboard: ArrowLeft');
+          prevSlide();
+        }
+      });
+
+      // Auto-slide every 5 seconds
+      let autoSlide = setInterval(() => {
+        console.log('Auto-slide triggered');
+        nextSlide();
+      }, 5000);
+
+      // Pause auto-slide on hover or focus
+      slider.addEventListener('mouseenter', () => {
+        console.log('Slider hover: pause');
+        clearInterval(autoSlide);
+      });
+      slider.addEventListener('mouseleave', () => {
+        console.log('Slider leave: resume');
+        autoSlide = setInterval(nextSlide, 5000);
+      });
+      slider.addEventListener('focusin', () => {
+        console.log('Slider focus: pause');
+        clearInterval(autoSlide);
+      });
+      slider.addEventListener('focusout', () => {
+        console.log('Slider focus out: resume');
+        autoSlide = setInterval(nextSlide, 5000);
+      });
+
+      // Initialize slider
+      goToSlide(0);
+
+      // Responsive adjustments
+      const handleResize = () => {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        console.log('Window resized, reset transform:', currentSlide);
+      };
+      window.addEventListener('resize', handleResize);
+
+      // Ensure DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOM loaded, re-initializing testimonial slider');
+        goToSlide(0);
+      });
+    </script>
+  </div>
+</section>
+
+    <section class="section section--sign-up">
+      <div class="section__title">
+        <h3 class="section__header">
+          The best time to manage your Chama is now!
+        </h3>
+      </div>
+      <button class="btn btn--show-modal">Start Managing Your Chama Today!</button>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__section">
+          <h4 class="footer__heading">Smart Chama</h4>
+          <p class="footer__text">Empowering communities through efficient group savings management.</p>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#section--1">Features</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#section--2">How It Works</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#section--3">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Contact Us</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Help Center</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h4 class="footer__heading">Connect</h4>
+          <ul class="footer__nav">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Facebook</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Twitter</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <img src="download.jpg" alt="Chama Logo" class="footer__logo" />
+        <p class="footer__copyright">&copy; 2024 Smart Chama Management. All rights reserved.</p>
+      </div>
+    </footer>
+
+    
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

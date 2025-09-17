@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Centering the form */
+.contribution-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Card Layout */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Heading */
+.card h2 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Input Groups */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Submit Button */
+.pay-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.pay-btn:hover {
+    background-color: #45a049;
+}

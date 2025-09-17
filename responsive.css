@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0056b3;
+    padding: 10px 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background: #0056b3;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    button, form input[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
